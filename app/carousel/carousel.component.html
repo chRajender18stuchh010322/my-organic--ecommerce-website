@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="slideshow-container">
+    <ng-container *ngFor="let scroll of scrollList; let s = index">
+      <div class="mySlides fade slide-inner" #mySlides>
+        <div class="first-sec">
+          <div class="img-section">
+            <img [src]="scroll.img" align="right" class="img-dis" />
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <div style="text-align: center" class="dots-pos">
+      <ng-container *ngFor="let item of scrollList; let d = index">
+        <span class="dot" (click)="currentSlide(d + 1)" #dot></span>
+      </ng-container>
+    </div>
+    <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+    <a class="next" (click)="plusSlides(1)">&#10095;</a>
+  </div>
+</div>
