@@ -1,0 +1,286 @@
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(241, 233, 215, 0.993);
+}
+.vegpic {
+  position: absolute;
+  right: 0px;
+  bottom: 13px;
+  animation: skew 3s;
+}
+@keyframes skew {
+  0% {
+    left: -60%;
+    padding-right: 500px;
+
+    transition-timing-function: ease-out;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+.bigtext {
+  position: absolute;
+  padding: 150px 60px 60px 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 90px;
+  font-weight: bold;
+  animation: animat 5s ease-in-out;
+}
+@keyframes animat {
+  from {
+    left: -50%;
+    padding-left: -20px;
+    transform: rotate(0deg);
+  }
+  to {
+    letter-spacing: 15px;
+  }
+}
+
+.bigtext sub {
+  position: absolute;
+  right: -40px;
+  color: rgb(39, 202, 75);
+  bottom: 30px;
+  font-size: 80px;
+}
+.smalltext {
+  position: absolute;
+  color: darkgrey;
+  line-height: 55px;
+  width: 50%;
+  padding: 250px 60px 60px 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 30px;
+  animation: delay 10s ease-in;
+}
+@keyframes delay {
+  from {
+    left: -100%;
+  }
+  to {
+    transform: rotateX(50deg);
+  }
+}
+
+.viewproducts {
+  position: absolute;
+  top: 80%;
+  padding-left: 150px;
+  animation: dely 4s;
+}
+@keyframes dely {
+  0% {
+    left: -100%;
+    padding-left: 400px;
+  }
+}
+.viewproducts a {
+  text-decoration: none;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  border: 2px solid black;
+  padding: 20px 20px 20px 20px;
+}
+.viewproducts a:hover {
+  background-color: rgb(65, 122, 8);
+  color: rgb(245, 245, 245);
+  border: rgb(14, 214, 14);
+  transition: 1s;
+  transition-timing-function: ease-in-out;
+}
+.container1 {
+  background-color: white;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-attachment: fixed;
+}
+.bx1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px dotted;
+}
+.bx2 span {
+  position: relative;
+  font-size: 50px;
+
+  margin-left: 30px;
+  bottom: -35%;
+}
+.bx1 span {
+  position: relative;
+  font-size: 50px;
+
+  margin-left: 30px;
+  bottom: -35%;
+}
+.bx3 span {
+  position: relative;
+  font-size: 50px;
+
+  margin-left: 30px;
+  bottom: -35%;
+}
+.bx4 span {
+  position: relative;
+  font-size: 50px;
+  margin-left: 30px;
+  bottom: -35%;
+}
+.bx5 span {
+  position: relative;
+  font-size: 50px;
+
+  margin-left: 30px;
+  bottom: -35%;
+}
+.bx2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px dotted;
+}
+.bx2 img {
+  position: absolute;
+  padding-left: 70px;
+  transform: rotate(30deg);
+}
+.bx1 img {
+  position: absolute;
+  padding-right: 100px;
+  transform: rotateZ(50deg);
+}
+.bx3 img {
+  position: absolute;
+  padding-bottom: 100px;
+  transform: rotateZ(100deg);
+}
+.bx4 img {
+  position: absolute;
+  padding-left: 70px;
+  transform: rotateZ(10deg);
+}
+.bx5 img {
+  position: absolute;
+  padding-left: 80px;
+  transform: rotateZ(10deg);
+}
+.bx3 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px dotted;
+}
+.bx4 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px dotted;
+}
+.bx5 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px dotted;
+}
+
+h1 {
+  padding-top: 70px;
+  font-family: fantasy;
+}
+
+p {
+  color: dimgrey;
+  font-size: 15px;
+}
+.container3 {
+  height: 10%;
+  background-color: white;
+}
+.container4 {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  height: 350px;
+}
+.organic-choice span {
+  font-size: 50px;
+  font-weight: 300px;
+  font-family: sans-serif;
+  padding-left: 35%;
+}
+.flip-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  width: 290px;
+  height: 290px;
+  padding-left: 5px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect*/
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: white;
+  color: rgb(7, 7, 7);
+  transform: rotateY(180deg);
+  align-items: center;
+}
+button {
+  background-color: rgba(255, 253, 253, 0.993);
+
+  padding: 10px;
+}
+.flip-card-back a {
+  text-decoration: none;
+
+  font-size: 30px;
+}
+.flip-card-back p {
+  margin-top: 70px;
+}
+.container4 a {
+  font-size: 30px;
+  text-decoration: none;
+  color: rgb(0, 7, 12);
+}

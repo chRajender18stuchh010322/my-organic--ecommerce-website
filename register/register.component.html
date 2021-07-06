@@ -1,0 +1,99 @@
+<section id="register">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title class="register-title">SignUp</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form class="form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <table class="full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="full-width">
+                <input
+                  matInput
+                  placeholder="Enter Username"
+                  type="text"
+                  name="registerUsername"
+                  ngModel
+                  required
+                  #registerUsername="ngModel"
+                />
+              </mat-form-field>
+              <br />
+              <small
+                class="form-text"
+                *ngIf="registerUsername.touched && !registerUsername.valid"
+                >Enter Username</small
+              >
+            </td>
+          </tr>
+          <br />
+          <tr>
+            <td>
+              <mat-form-field class="full-width">
+                <input
+                  matInput
+                  placeholder="Enter Email"
+                  email
+                  name="registerUserEmail"
+                  ngModel
+                  required
+                  #registerUserEmail="ngModel"
+                />
+              </mat-form-field>
+              <br />
+              <small
+                class="form-text"
+                *ngIf="registerUserEmail.touched && !registerUserEmail.valid"
+                >Enter Valid Email Address</small
+              >
+            </td>
+          </tr>
+          <br />
+          <tr>
+            <td>
+              <mat-form-field class="full-width">
+                <input
+                  matInput
+                  placeholder="Enter Password"
+                  type="password"
+                  name="password"
+                  ngModel
+                  required
+                  #password="ngModel"
+                />
+              </mat-form-field>
+              <br />
+              <small
+                class="form-text"
+                *ngIf="password.touched && !password.valid"
+                >Enter Valid Password</small
+              >
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!--<mat-spinner diameter="20"></mat-spinner>-->
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="f.invalid"
+      >
+        SignUp
+      </button>
+      <p class="login_p">
+        Already have an account ?<a
+          class="login"
+          [routerLink]="['/login']"
+          color="primary"
+          >Login here.</a
+        >
+      </p>
+    </mat-card-actions>
+  </mat-card>
+</section>

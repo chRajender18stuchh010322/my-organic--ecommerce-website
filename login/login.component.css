@@ -1,0 +1,23 @@
+#login {
+  position: absolute;
+
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+}
+.card {
+  padding-left: 100px;
+  margin-top: 80px;
+  width: fit-content;
+  left: 35%;
+  background-color: rgba(255, 255, 255, 0.342);
+}
+.login-title {
+  font-size: 40px;
+  font-family: cursive;
+  color: white;
+}
+.mat-form-field {
+  color: aliceblue;
+}

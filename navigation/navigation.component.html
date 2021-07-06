@@ -1,0 +1,21 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span>ORGANIC HOME</span>
+    <span class="menu-spacer"></span>
+    <div class="nav">
+      <div fxShow="true" fxHide.lt-md>
+        <a routerLink="/home" mat-button>Home</a>
+        <a routerLink="/vegetables" mat-button>Vegetables</a>
+        <a routerLink="/fruits" mat-button>Fruits</a>
+        <a routerLink="/blogs" mat-button>Blogs</a>
+        <a routerLink="/contact-us" mat-button>Contact Us</a>
+      </div>
+      <div class="icons">
+        <a href="#" mat-button><mat-icon>search</mat-icon> </a>
+        <a routerLink="cart" mat-button><mat-icon>shopping_cart</mat-icon></a>
+        <a href="#" mat-button><mat-icon>favorite</mat-icon></a>
+        <a routerLink="login" mat-button>Login</a>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

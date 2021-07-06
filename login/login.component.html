@@ -1,0 +1,86 @@
+<section id="login">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title class="login-title">Login</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form class="form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <table class="full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="full-width">
+                <input
+                  matInput
+                  placeholder="Username"
+                  type="text"
+                  name="username"
+                  ngModel
+                  required
+                  #username="ngModel"
+                />
+              </mat-form-field>
+              <br />
+              <small
+                class="form-text"
+                *ngIf="username.touched && !username.valid"
+                >Enter Valid Username</small
+              >
+            </td>
+          </tr>
+          <br />
+          <tr>
+            <td>
+              <mat-form-field class="full-width">
+                <input
+                  matInput
+                  placeholder="Password"
+                  type="password"
+                  name="password"
+                  ngModel
+                  required
+                  #password="ngModel"
+                />
+              </mat-form-field>
+              <br />
+              <small
+                class="form-text"
+                *ngIf="password.touched && !password.valid"
+                >Enter Password</small
+              >
+            </td>
+          </tr>
+          <br />
+          <tr>
+            <td>
+              <a class="forgotpassword" [routerLink]="['']" color="primary"
+                >Forgot Password ?</a
+              >
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!--<mat-spinner diameter="20"></mat-spinner>-->
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button
+        routerLink="/home"
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="f.invalid"
+      >
+        Login
+      </button>
+      <p class="register_p">
+        Dont have an account ?<a
+          class="register"
+          [routerLink]="['/register']"
+          color="primary"
+          >Register here.</a
+        >
+      </p>
+    </mat-card-actions>
+  </mat-card>
+</section>
